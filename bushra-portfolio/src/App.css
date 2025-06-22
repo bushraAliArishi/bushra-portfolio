@@ -43,71 +43,71 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #F4F6F8;
-  --foreground: #002B45;
+  --background: #F4F6F9;
+  --foreground: #1E2430;
   --card: #FFFFFF;
-  --card-foreground: #002B45;
+  --card-foreground: #1E2430;
   --popover: #FFFFFF;
-  --popover-foreground: #002B45;
-  --primary: #0A84FF;
+  --popover-foreground: #1E2430;
+  --primary: #1C2B5A;
   --primary-foreground: #FFFFFF;
-  --secondary: #002B45;
+  --secondary: #46386B;
   --secondary-foreground: #FFFFFF;
-  --muted: #F4F6F8;
-  --muted-foreground: #002B45;
-  --accent: #FF8A00;
+  --muted: #D0D5DE;
+  --muted-foreground: #6A6F7C;
+  --accent: #D86A40;
   --accent-foreground: #FFFFFF;
-  --destructive: #FF0000;
-  --border: #E0E0E0;
-  --input: #E0E0E0;
-  --ring: #0A84FF;
-  --chart-1: #0A84FF;
-  --chart-2: #002B45;
-  --chart-3: #FF8A00;
-  --chart-4: #18C9C9;
-  --chart-5: #F4F6F8;
-  --sidebar: #F4F6F8;
-  --sidebar-foreground: #002B45;
-  --sidebar-primary: #0A84FF;
+  --destructive: #CE4B4B;
+  --border: #D0D5DE;
+  --input: #D0D5DE;
+  --ring: #1C2B5A;
+  --chart-1: #1C2B5A;
+  --chart-2: #46386B;
+  --chart-3: #D86A40;
+  --chart-4: #15A7B5;
+  --chart-5: #F4F6F9;
+  --sidebar: #F4F6F9;
+  --sidebar-foreground: #1E2430;
+  --sidebar-primary: #1C2B5A;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #FF8A00;
+  --sidebar-accent: #D86A40;
   --sidebar-accent-foreground: #FFFFFF;
-  --sidebar-border: #E0E0E0;
-  --sidebar-ring: #0A84FF;
+  --sidebar-border: #D0D5DE;
+  --sidebar-ring: #1C2B5A;
 }
 
 .dark {
-  --background: #001A2B;
-  --foreground: #E6EDF1;
-  --card: #00273E;
-  --card-foreground: #E6EDF1;
-  --popover: #00273E;
-  --popover-foreground: #E6EDF1;
-  --primary: #0A84FF;
-  --primary-foreground: #FFFFFF;
-  --secondary: #18C9C9;
-  --secondary-foreground: #F4F6F8;
-  --muted: #003552;
-  --muted-foreground: #9FB4C1;
-  --accent: #FF9A1A;
-  --accent-foreground: #FFFFFF;
-  --destructive: #FF4C4C;
-  --border: #003552;
-  --input: #003552;
-  --ring: #0A84FF;
-  --chart-1: #0A84FF;
-  --chart-2: #002B45;
-  --chart-3: #FF8A00;
-  --chart-4: #18C9C9;
-  --chart-5: #F4F6F8;
-  --sidebar: #001A2B;
-  --sidebar-foreground: #E6EDF1;
-  --sidebar-primary: #0A84FF;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #FF9A1A;
-  --sidebar-accent-foreground: #FFFFFF;
-  --sidebar-border: #003552;
-  --sidebar-ring: #0A84FF;
+  --background: #0B0E13;
+  --foreground: #E6E8EB;
+  --card: #141922;
+  --card-foreground: #E6E8EB;
+  --popover: #141922;
+  --popover-foreground: #E6E8EB;
+  --primary: #31427E;
+  --primary-foreground: #E6E8EB;
+  --secondary: #665091;
+  --secondary-foreground: #E6E8EB;
+  --muted: #212733;
+  --muted-foreground: #A2A8B4;
+  --accent: #E07648;
+  --accent-foreground: #E6E8EB;
+  --destructive: #DE5F5F;
+  --border: #212733;
+  --input: #212733;
+  --ring: #31427E;
+  --chart-1: #31427E;
+  --chart-2: #665091;
+  --chart-3: #E07648;
+  --chart-4: #1BB3C2;
+  --chart-5: #0B0E13;
+  --sidebar: #0B0E13;
+  --sidebar-foreground: #E6E8EB;
+  --sidebar-primary: #31427E;
+  --sidebar-primary-foreground: #E6E8EB;
+  --sidebar-accent: #E07648;
+  --sidebar-accent-foreground: #E6E8EB;
+  --sidebar-border: #212733;
+  --sidebar-ring: #31427E;
 }
 
 @layer base {
@@ -126,8 +126,8 @@
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(10, 132, 255, 0.3); }
-  50% { box-shadow: 0 0 30px rgba(10, 132, 255, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(28, 43, 90, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(28, 43, 90, 0.6); }
 }
 
 .float-animation {
@@ -139,7 +139,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #0A84FF, #18C9C9);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -147,30 +147,45 @@
 
 .tech-grid {
   background-image: 
-    linear-gradient(rgba(10, 132, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(10, 132, 255, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(28, 43, 90, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28, 43, 90, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
 .project-card {
   transition: all 0.3s ease;
-  border: 1px solid #E0E0E0;
+  border: 1px solid var(--border);
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(10, 132, 255, 0.15);
+  box-shadow: 0 10px 25px rgba(28, 43, 90, 0.15);
 }
 
 .skill-badge {
-  background: linear-gradient(135deg, #18C9C9, #0A84FF);
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
   transition: all 0.3s ease;
 }
 
 .skill-badge:hover {
   transform: scale(1.05);
-  background: linear-gradient(135deg, #0A84FF, #FF8A00);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
 }
 
+.code-glow {
+  text-shadow: 0 0 4px rgba(21, 167, 181, 0.35);
+}
 
+.dark .grid.w-full.grid-cols-3 {
+  background-color: var(--muted);
+}
+
+.dark .grid.w-full.grid-cols-3 button {
+  color: var(--muted-foreground);
+}
+
+.dark .grid.w-full.grid-cols-3 button[data-state="active"] {
+  background-color: var(--card);
+  color: var(--card-foreground);
+}

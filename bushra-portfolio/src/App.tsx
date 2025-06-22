@@ -3,16 +3,16 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ExternalLink, 
-  Code, 
-  Database, 
-  Cloud, 
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+  ExternalLink,
+  Code,
+  Database,
+  Cloud,
   Smartphone,
   Users,
   Award,
@@ -380,33 +380,33 @@ function App(): JSX.Element {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button size="lg" className="glow-effect">
                 <Mail className="mr-2 h-5 w-5" />
-                bushra.ali.arishi@gmail.com
+                Get In Touch
               </Button>
               <Button variant="outline" size="lg">
-                <Phone className="mr-2 h-5 w-5" />
-                +966 530 577 725
+                <Linkedin className="mr-2 h-5 w-5" />
+                Connect on LinkedIn
               </Button>
             </div>
             
-            <div className="flex justify-center gap-6">
-              <Button variant="ghost" size="icon" className="rounded-full">
-                <Linkedin className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="rounded-full">
-                <Github className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="rounded-full">
+            <div className="flex justify-center items-center gap-6 text-muted-foreground">
+              <a href="mailto:bushra.arishi@example.com" className="hover:text-primary transition-colors">
                 <Mail className="h-5 w-5" />
-              </Button>
+              </a>
+              <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <Github className="h-5 w-5" />
+              </a>
+              <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-border">
-        <div className="container mx-auto px-6 text-center text-muted-foreground">
-          <p>&copy; 2025 Bushra Ali Arishi. All rights reserved.</p>
+      <footer className="py-8 text-center text-muted-foreground text-sm">
+        <div className="container mx-auto px-6">
+          &copy; {new Date( ).getFullYear()} Bushra Ali Arishi. All rights reserved.
         </div>
       </footer>
     </div>
@@ -414,4 +414,3 @@ function App(): JSX.Element {
 }
 
 export default App
-

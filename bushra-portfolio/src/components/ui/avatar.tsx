@@ -5,10 +5,14 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar"
 
 import { cn } from "@/lib/utils"
 
+interface AvatarProps extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root> {
+  className?: string;
+}
+
 function Avatar({
   className,
   ...props
-}) {
+}: AvatarProps) {
   return (
     <AvatarPrimitive.Root
       data-slot="avatar"
@@ -17,10 +21,14 @@ function Avatar({
   );
 }
 
+interface AvatarImageProps extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image> {
+  className?: string;
+}
+
 function AvatarImage({
   className,
   ...props
-}) {
+}: AvatarImageProps) {
   return (
     <AvatarPrimitive.Image
       data-slot="avatar-image"
@@ -29,10 +37,14 @@ function AvatarImage({
   );
 }
 
+interface AvatarFallbackProps extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback> {
+  className?: string;
+}
+
 function AvatarFallback({
   className,
   ...props
-}) {
+}: AvatarFallbackProps) {
   return (
     <AvatarPrimitive.Fallback
       data-slot="avatar-fallback"
