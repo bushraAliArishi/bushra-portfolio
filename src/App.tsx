@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, JSX } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -180,6 +180,7 @@ function App(): JSX.Element {
                 <Mail className="mr-2 h-5 w-5" />
                 Get In Touch
               </Button>
+              
               <Button variant="outline" size="lg">
                 <Github className="mr-2 h-5 w-5" />
                 View Projects
